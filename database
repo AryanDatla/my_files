@@ -1,0 +1,3 @@
+create database company;
+use employee;
+create table employee (id int, name text, phone_no int, department text);
