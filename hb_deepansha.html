@@ -3,96 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Sister!</title>
-    <style>
+    <title>Happy Birthday!</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    </head>
+      <style>
         body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffdfba;
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
         }
-
-        #slideshow-container {
-            max-width: 800px; /* Set the maximum width of the slideshow container */
+        .card {
+            background-color: #fff;
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #888888;
             position: relative;
-            margin: auto;
+            animation: bounce 2s infinite;
         }
-
-        .mySlides {
-            display: none;
+        h1 {
+            color: #ff4500;
+            font-size: 36px;
         }
-
-        img {
-            width: 100%;
-            max-height: 400px; /* Set the maximum height of the images */
-            object-fit: cover; /* Maintain aspect ratio while covering the entire container */
-        }
-
-        /* Navigation buttons */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
+        p {
             font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
         }
-
-        .prev {
+        
+        #confetti {
+            position: absolute;
+            top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
         }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
     </style>
-</head>
 <body>
+    <div class="card">
+        <h1>Happy Birthday!</h1>
+        <div id="confetti"></div>
 
-<div id="slideshow-container">
-    <!-- Add your sister's photos here -->
-    <div class="mySlides">
-        <img src="photo1.jpg" alt="Photo 1">
+	<img src="photo1.jpg" alt="image 1" width="300">
+    
+        <p>Another year has come and gone, 📆</p>
+	   <p>But our friendship's still holding strong. 👫</p>
+	   <p>You're the sprinkles on my cupcake, 🧁</p>
+	   <p>The laughter in every move I make. 😂</p>
+           
+	   <p>You're aging like a fine wine, it's true, 🍷</p>
+	   <p>But you're still as cute as a kangaroo. 🦘</p>
+	   <p>With each passing year, you only shine, ✨</p>
+	   <p>Just like a rare and precious wine. 🍇</p>
+	   
+	   <p>So blow out those candles with all your might, 🕯️💨</p>
+	   <p>And make a wish upon this starry night. 🌟</p>
+	   <p>May your dreams come true, my dear, 🌈</p>
+	   <p>And bring you happiness throughout the year. 🎆</p>
+	   
+	   <p>Here's to more adventures and endless fun, 🌍</p>
+	   <p>With you, my friend, there's always a ton. 🎈</p>
+	   <p>Happy birthday, bestie, you're the best, 🥳</p>
+           <p>Let's celebrate and be forever blessed! 🎊 🎂</p>
+        <p>May your year be as awesome as you are!</p>
     </div>
-    <div class="mySlides">
-        <img src="photo2.jpg" alt="Photo 2">
-    </div>
-    <div class="mySlides">
-        <img src="photo3.jpg" alt="Photo 3">
-    </div>
-    <!-- Add more slides as needed -->
-
-    <!-- Navigation buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-
-<script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000); // Change slide every 3 seconds
-    }
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-</script>
-
+    <script>
+        particlesJS("confetti", {
+            "particles": {
+                "number": {
+                    "value": 100
+                },
+                "color": {
+                    "value": "#ffcc00"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.7,
+                    "random": true
+                },
+                "size": {
+                    "value": 5
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 5,
+                    "direction": "none",
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": false
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": false
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
