@@ -4,10 +4,15 @@ Created on Sun Feb 25 00:00:28 2024
 
 @author: ARYAN DATLA
 
-A list is a data structure in python used to store homogeneous elements. It is mutable, i.e.,
+A list is a data structure in python used to store various elements. 
+
+It is mutable, i.e.,
 we can add, remove and manipulate the elements as per our requirement
+
 It can be cloned by various methods, like copy() or throught iteration or list comprehensions.
+
 Each element is individually accesible using their correct index starting from 0.
+
 It also supports negetive idexing, i.e., the last elements can be accesed from from both front and last,
 eg: print(nums[::-1]) prints the list in reverse order, 
 simillarly we can access each element using either it's positive or negetive index
